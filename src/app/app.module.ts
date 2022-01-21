@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TokenService } from './services/token.service';
 import { AuthService } from './services/auth.service';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PaginaComponent } from './pagina/pagina.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NavbarComponent,
     SignupComponent,
     RequestResetComponent,
-    ResponseResetComponent
+    ResponseResetComponent,
+    PaginaComponent
   ],
   imports: [
     BrowserModule,
