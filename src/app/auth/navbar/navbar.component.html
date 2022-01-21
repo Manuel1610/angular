@@ -1,11 +1,84 @@
 
-<p>navbar works!</p>
-<nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand">Navbar</a>
-  <div>
-    <a class="navbar-brand" routerLink="login" *ngIf="!loggedIn">Login</a>
-    <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
-    <a class="navbar-brand" routerLink="/perfil" *ngIf="loggedIn">Profile</a>
-  </div>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" aria-label="Eleventh navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/perfil" *ngIf="loggedIn">PERFIL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-</nav>
+      <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li>
+            <a></a>
+          </li>
+
+        </ul>
+        <a class="nav-link" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <ul class="row g-3 py-5 row-cols-0 row-cols-lg-3" >
+      <div class="nav-item">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">CUADERNO AREA</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button class="btn btn-primary" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">CUADERNO SOPORTE</h3>
+            <p class="card-text">Some quick example text to build on the card </p>
+            <button class="btn btn-primary" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">PRACTICANTES</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button class="btn btn-primary" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+      </ul>
+  </div>
+  <div>
+    <ul class="row g-3 py-5 row-cols-0 row-cols-lg-3" >
+      <div class="nav-item">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">CUADERNO AREA</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button class="btn btn-primary" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">CUADERNO SOPORTE</h3>
+            <p class="card-text">Some quick example text to build on the card </p>
+            <button class="btn btn-primary" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">PRACTICANTES</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button class="btn btn-primary" type="button">Button</button>
+          </div>
+        </div>
+      </div>
+      </ul>
+  </div>
+</div>

@@ -31,10 +31,9 @@
             ],
             "styles": [
               "src/styles.css",
-              "bootswatch/dist/darkly/bootstrap.min.css"
+              "bootstrap/dist/js/bootstrap.min.js"
             ],
             "scripts": [
-              "bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
