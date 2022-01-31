@@ -8,6 +8,8 @@ import { ResponseResetComponent } from './auth/password/response-reset/response-
 import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
 import { PaginaComponent } from './pagina/pagina.component';
+import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuaderno.component';
+import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
 
 const routes: Routes = [
   {
@@ -38,7 +40,17 @@ const routes: Routes = [
   {
     path: 'pagina',
     component: PaginaComponent,
-  }
+  },
+  {
+    path: 'indexform',
+    component : ListCuadernoComponent,
+  },
+  {
+    path: 'form',
+    component : FormCuadernoComponent,
+  },
+  { path: 'form/:id',
+    component: FormCuadernoComponent },
 ];
 
 @NgModule({

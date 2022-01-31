@@ -16,6 +16,8 @@ import { TokenService } from './services/token.service';
 import { AuthService } from './services/auth.service';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PaginaComponent } from './pagina/pagina.component';
+import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
+import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuaderno.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { PaginaComponent } from './pagina/pagina.component';
     SignupComponent,
     RequestResetComponent,
     ResponseResetComponent,
-    PaginaComponent
+    PaginaComponent,
+    ListCuadernoComponent,
+    FormCuadernoComponent
   ],
   imports: [
     BrowserModule,

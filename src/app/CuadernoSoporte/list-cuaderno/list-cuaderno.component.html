@@ -1,0 +1,39 @@
+<section class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>List </h4>
+    <a routerLink="/form" class="btn btn-success">Create </a>
+  </div>
+
+  <br>
+
+  <table class="color">
+    <thead >
+      <th >#</th>
+      <th>FECHA</th>
+      <th>TELEFONO</th>
+      <th>AREA</th>
+      <th>PROBLEMA EQUIPO</th>
+      <th>RESPOSABLE EQUIPO</th>
+      <th>RESPOSABLE SOPORTE</th>
+      <th>N° PATRIMONIAL</th>
+      <th>ENTREGA EQUIPO</th>
+      <th width="220px">ACCIÓN</th>
+    </thead>
+    <tbody *ngFor="let d of list">
+      <td>{{ d.id }}</td>
+      <td>{{ d.fecha }}</td>
+      <td>{{ d.phone }}</td>
+      <td>{{ d.area }}</td>
+      <td>{{ d.problema }}</td>
+      <td>{{ d.responsablearea }}</td>
+      <td>{{ d.responsablesoporte }}</td>
+      <td>{{ d.codigopatrimonial }}</td>
+      <td>{{ d.entrega }}</td>
+      <td>
+        <a href="#" routerLink="/form/{{ d.id }}" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tbody>
+  </table>
+</section>
