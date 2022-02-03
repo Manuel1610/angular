@@ -34,6 +34,7 @@ export class SignupComponent implements OnInit {
   handleError(error: any): void {
     console.log(error)
   }
+
   handleResponse(data : any) {
     this.Token.handle(data.access_token);
     this.router.navigateByUrl('/perfil');

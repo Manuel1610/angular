@@ -32,7 +32,8 @@ export class FormCuadernoComponent implements OnInit {
       responsablearea:    [],
       responsablesoporte: [],
       codigopatrimonial:  [],
-      entrega:            [],
+      fechaentrega:       [],
+      salida:             [],
         });
     let id = this.route.snapshot.paramMap.get('id');
     if  (id !=null){

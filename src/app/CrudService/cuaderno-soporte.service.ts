@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { TokenService } from '../services/token.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,16 @@ export class CuadernoSoporteService {
 
   endPoint = 'http://127.0.0.1:8000/api/libro';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private tokenService: TokenService ) {
 
   }
   public getList(): Observable<any> {
-    return this.http.get<any>(`${this.endPoint}`);
+    return this.http.get<any>(`${this.endPoint}`, {
+      headers:{
+        'Authorization': 'Bearer' + this.tokenService.get()
+      }
+    });
   }
   public getById(id : any): Observable<any> {
     return this.http.get<any>(`${this.endPoint}/${id}`);
@@ -28,5 +34,7 @@ export class CuadernoSoporteService {
     console.log(`${this.endPoint}/${id}` );
     return this.http.delete<any>(`${this.endPoint}/${id}`);
   }
+
+
 
 }
