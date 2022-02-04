@@ -18,6 +18,8 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PaginaComponent } from './pagina/pagina.component';
 import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
 import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuaderno.component';
+import { FormPracticanteComponent } from './CrudPracticante/form-practicante/form-practicante.component';
+import { ListPracticanteComponent } from './CrudPracticante/list-practicante/list-practicante.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuad
     ResponseResetComponent,
     PaginaComponent,
     ListCuadernoComponent,
-    FormCuadernoComponent
+    FormCuadernoComponent,
+    FormPracticanteComponent,
+    ListPracticanteComponent
   ],
   imports: [
     BrowserModule,

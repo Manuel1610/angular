@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<section class="container">
+  <div class="d-flex justify-content-between">
+    <h4>List </h4>
+    <a routerLink="/form" class="btn btn-success">Create </a>
+  </div>
+
+  <br>
+
+  <table class="color">
+    <thead >
+      <th >NOMBRES</th>
+      <th>APELLIDOS</th>
+      <th>TELEFONO</th>
+      <th>FECHA DE NACIMIENTO</th>
+      <th>DNI</th>
+      <th>CELULAR</th>
+      <th>TURNO</th>
+      <th>FECHA INICIO</th>
+      <th>FECHA FIN</th>
+      <th width="220px">ACCIÓN</th>
+    </thead>
+    <tbody *ngFor="let d of list">
+      <td>{{ d.Nombres }}</td>
+      <td>{{ d.Apellidos }}</td>
+      <td>{{ d.FechaNacimiento }}</td>
+      <td>{{ d.DNI }}</td>
+      <td>{{ d.Celular }}</td>
+      <td>{{ d.Turno }}</td>
+      <td>{{ d.Inicio }}</td>
+      <td>{{ d.Fin }}</td>
+
+      <td>
+        <a href="#" routerLink="/form/{{ d.id }}" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tbody>
+  </table>
+</section>
+
+
+
+
+
+
+
