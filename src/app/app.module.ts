@@ -18,15 +18,10 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PaginaComponent } from './pagina/pagina.component';
 import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
 import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuaderno.component';
-<<<<<<< HEAD
 import { FormPracticanteComponent } from './CrudPracticante/form-practicante/form-practicante.component';
 import { ListPracticanteComponent } from './CrudPracticante/list-practicante/list-practicante.component';
-
-=======
 import { IndexCuadernoComponent } from './CuadernoDocumentacion/index-cuaderno/index-cuaderno.component';
 import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-cuaderno/formulario-cuaderno.component';
->>>>>>> c905e80928a2df43f22208317d067249b126762e
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,13 +34,11 @@ import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-
     PaginaComponent,
     ListCuadernoComponent,
     FormCuadernoComponent,
-<<<<<<< HEAD
     FormPracticanteComponent,
-    ListPracticanteComponent
-=======
+    ListPracticanteComponent,
     IndexCuadernoComponent,
     FormularioCuadernoComponent
->>>>>>> c905e80928a2df43f22208317d067249b126762e
+
   ],
   imports: [
     BrowserModule,
