@@ -10,6 +10,8 @@ import { AfterLoginService } from './services/after-login.service';
 import { PaginaComponent } from './pagina/pagina.component';
 import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuaderno.component';
 import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
+import { IndexCuadernoComponent } from './CuadernoDocumentacion/index-cuaderno/index-cuaderno.component';
+import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-cuaderno/formulario-cuaderno.component';
 
 const routes: Routes = [
   {
@@ -50,7 +52,20 @@ const routes: Routes = [
     component : FormCuadernoComponent,
   },
   { path: 'form/:id',
-    component: FormCuadernoComponent },
+    component: FormCuadernoComponent
+  },
+  {
+    path: 'formulario',
+    component : FormularioCuadernoComponent
+  },
+  {
+    path: 'formulario/:id',
+    component : FormularioCuadernoComponent
+  },
+  {
+    path: 'indexformulario',
+    component : IndexCuadernoComponent,
+  },
 ];
 
 @NgModule({
