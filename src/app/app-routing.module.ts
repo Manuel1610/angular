@@ -7,7 +7,6 @@ import { RequestResetComponent } from './auth/password/request-reset/request-res
 import { ResponseResetComponent } from './auth/password/response-reset/response-reset.component';
 import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
-import { PaginaComponent } from './pagina/pagina.component';
 import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuaderno.component';
 import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
 import { IndexCuadernoComponent } from './CuadernoDocumentacion/index-cuaderno/index-cuaderno.component';
@@ -41,10 +40,7 @@ const routes: Routes = [
     component: ResponseResetComponent,
     canActivate: [BeforeLoginService]
   },
-  {
-    path: 'pagina',
-    component: PaginaComponent,
-  },
+
   {
     path: 'indexform',
     component : ListCuadernoComponent,
