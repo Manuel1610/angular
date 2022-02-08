@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TokenService } from './services/token.service';
 import { AuthService } from './services/auth.service';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { PaginaComponent } from './pagina/pagina.component';
+
 import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
 import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuaderno.component';
 import { FormPracticanteComponent } from './CrudPracticante/form-practicante/form-practicante.component';
@@ -31,7 +31,7 @@ import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-
     SignupComponent,
     RequestResetComponent,
     ResponseResetComponent,
-    PaginaComponent,
+
     ListCuadernoComponent,
     FormCuadernoComponent,
     FormPracticanteComponent,
