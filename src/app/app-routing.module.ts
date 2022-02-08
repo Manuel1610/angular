@@ -12,6 +12,8 @@ import { FormCuadernoComponent } from './CuadernoSoporte/form-cuaderno/form-cuad
 import { ListCuadernoComponent } from './CuadernoSoporte/list-cuaderno/list-cuaderno.component';
 import { IndexCuadernoComponent } from './CuadernoDocumentacion/index-cuaderno/index-cuaderno.component';
 import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-cuaderno/formulario-cuaderno.component';
+import { FormPracticanteComponent } from './CrudPracticante/form-practicante/form-practicante.component';
+import { ListPracticanteComponent } from './CrudPracticante/list-practicante/list-practicante.component';
 
 const routes: Routes = [
   {
@@ -66,6 +68,18 @@ const routes: Routes = [
     path: 'indexformulario',
     component : IndexCuadernoComponent,
   },
+  {
+    path: 'IndexPracticantes',
+    component : ListPracticanteComponent,
+  },
+  {
+    path: 'FormPracticantes',
+    component : FormPracticanteComponent
+  },
+  {
+    path: 'FormPracticantes/:id',
+    component : FormPracticanteComponent
+  }
 ];
 
 @NgModule({

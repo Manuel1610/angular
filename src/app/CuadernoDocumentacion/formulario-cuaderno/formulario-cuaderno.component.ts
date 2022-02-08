@@ -24,16 +24,17 @@ CuadernoForm!: FormGroup;
 
   ngOnInit(): void {
     this.CuadernoForm = this.formBuild.group({
-      id:                 [],
-      fecha:              [],
-      phone:              [],
-      area:               [],
-      problema:           [],
-      responsablearea:    [],
-      responsablesoporte: [],
-      codigopatrimonial:  [],
-      fechaentrega:       [],
-      salida:             [],
+      id:                   [],
+      fecha:                [],
+      documento:            [],
+      folio_entrada:        [],
+      procedencia:          [],
+      asunto:               [],
+      encargado:            [],
+      proveido:             [],
+      folio_salida:         [],
+      fechaentrega:         [],
+      cargo:                [],
         });
     let id = this.route.snapshot.paramMap.get('id');
     if  (id !=null){

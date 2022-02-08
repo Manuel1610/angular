@@ -1,4 +1,4 @@
-<p>formulario-cuaderno works!</p>
+
 <app-navbar></app-navbar>
 <section class="container">
 <div class="row mb-3">
@@ -6,65 +6,72 @@
     <div [hidden]="false">
     </div>
     <div class="row mb-3" >
-        <label for="colFormLabel" class="col-sm-2 col-form-label" >FECHA:</label>
+        <label for="colFormLabel" class="col-sm-2 col-form-label" >FECHA INGRESO:</label>
           <div class="col-sm-10">
             <input class="col-sm-10"type="text" formControlName="fecha" name="fecha" id="fecha" class="form-control" id="colFormLabel"required>
           </div>
     </div>
     <br>
     <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">TELEFONO:</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label">DOCUMENTO:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="phone" name="phone" id="phone"class="form-control" id="colFormLabel" required>
+          <input type="text" formControlName="documento" name="documento" id="documento"class="form-control" id="colFormLabel" required>
         </div>
     </div>
     <br>
     <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">AREA:</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label">FOLIO:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="area" name="area" id="area" class="form-control" id="colFormLabel" required>
+          <input type="text" formControlName="folio_entrada" name="folio_entrada" id="folio_entrada" class="form-control" id="colFormLabel" required>
         </div>
     </div>
     <br>
     <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">PROBLEMA:</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label">PROCEDENCIA:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="problema" name="problema" id="problema" class="form-control" id="colFormLabel" required>
+          <input type="text" formControlName="procedencia" name="procedencia" id="procedencia" class="form-control" id="colFormLabel" required>
         </div>
     </div>
     <br>
     <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">RESPONSABLE AREA:</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label">ASUNTO:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="responsablearea" name="responsablearea" id="responsablearea" class="form-control" id="colFormLabel" required>
+          <input type="text" formControlName="asunto" name="asunto" id="asunto" class="form-control" id="colFormLabel" required>
         </div>
     </div>
     <br>
     <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">RESPONSABLE SOPORTE:</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label">ENCARGADO:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="responsablesoporte" name="responsablesoporte" id="responsablesoporte"  class="form-control" id="colFormLabel"required>
+          <input type="text" formControlName="encargado" name="encargado" id="encargado"  class="form-control" id="colFormLabel"required>
         </div>
     </div>
     <br>
     <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label"> N° PATRIMONIAL:</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label">PROVEIDO:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="codigopatrimonial" name="codigopatrimonial" id="codigopatrimonial" class="form-control" id="colFormLabel" required>
+          <input type="text" formControlName="proveido" name="proveido" id="proveido" class="form-control" id="colFormLabel" required>
         </div>
     </div>
     <br>
     <div class="row mb-3" >
-      <label for="colFormLabel" class="col-sm-2 col-form-label" >FECHA ENTREGA:</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label" >FOLIO:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="fechaentrega" name="fechaentrega" id="fechaentrega" class="form-control" id="colFormLabel"required>
+          <input type="text" formControlName="folio_salida" name="folio_salida" id="folio_salida" class="form-control" id="colFormLabel"required>
         </div>
   </div>
   <br>
     <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">SALIDA::</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label">FECHA ENTREGA:</label>
         <div class="col-sm-10">
-          <input type="text" formControlName="salida" name="salida" id="salida" class="form-control" id="colFormLabel" required>
+          <input type="text" formControlName="fechaentrega" name="fechaentrega" id="fechaentrega" class="form-control" id="colFormLabel" required>
+        </div>
+    </div>
+    <br>
+    <div class="row mb-3">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">CARGO:</label>
+        <div class="col-sm-10">
+          <input type="text" formControlName="cargo" name="cargo" id="cargo" class="form-control" id="colFormLabel" required>
         </div>
     </div>
     <br>

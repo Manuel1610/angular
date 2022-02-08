@@ -1,4 +1,4 @@
-<p>index-cuaderno works!</p>
+
 <app-navbar></app-navbar>
 <section class="container">
   <div class="d-flex justify-content-between">
@@ -11,28 +11,30 @@
   <table class="color">
     <thead >
       <th >#</th>
-      <th>FECHA</th>
-      <th>TELEFONO</th>
-      <th>AREA</th>
-      <th>PROBLEMA EQUIPO</th>
-      <th>RESPOSABLE EQUIPO</th>
-      <th>RESPOSABLE SOPORTE</th>
-      <th>N° PATRIMONIAL</th>
+      <th>FECHA INGRESO</th>
+      <th>DOCUMENTO</th>
+      <th>FOLIO</th>
+      <th>PROCEDENCIA</th>
+      <th>ASUNTO</th>
+      <th>ENCARGADO</th>
+      <th>PROVEIDO</th>
+      <th>FOLIO</th>
       <th>FECHA ENTREGA</th>
-      <th>SALIDA</th>
+      <th>CARGO</th>
       <th width="220px">ACCIÓN</th>
     </thead>
     <tbody *ngFor="let d of list">
       <td>{{ d.id }}</td>
       <td>{{ d.fecha }}</td>
-      <td>{{ d.phone }}</td>
-      <td>{{ d.area }}</td>
-      <td>{{ d.problema }}</td>
-      <td>{{ d.responsablearea }}</td>
-      <td>{{ d.responsablesoporte }}</td>
-      <td>{{ d.codigopatrimonial }}</td>
+      <td>{{ d.documento }}</td>
+      <td>{{ d.folio_entrada }}</td>
+      <td>{{ d.procedencia }}</td>
+      <td>{{ d.asunto }}</td>
+      <td>{{ d.encargado }}</td>
+      <td>{{ d.proveido }}</td>
+      <td>{{ d.folio_salida}}</td>
       <td>{{ d.fechaentrega}}</td>
-      <td>{{ d.salida }}</td>
+      <td>{{ d.cargo }}</td>
       <td>
         <a href="#" routerLink="/form/{{ d.id }}" class="btn btn-primary">Edit</a>
         <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>

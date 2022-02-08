@@ -52,7 +52,7 @@ PracticanteForm!:FormGroup;
       });
 
     }
-    this.router.navigate(['/indexform'])
+    this.router.navigate(['/IndexPracticantes'])
   }
 
 }
