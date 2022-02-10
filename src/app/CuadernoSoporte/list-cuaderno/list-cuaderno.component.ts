@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CuadernoSoporteService } from 'src/app/CrudService/cuaderno-soporte.service';
+import * as printJS from 'print-js';
 @Component({
   selector: 'app-list-cuaderno',
   templateUrl: './list-cuaderno.component.html',
@@ -32,5 +33,18 @@ export class ListCuadernoComponent implements OnInit {
       this.getList();
     });
   }
-
+  print(){
+    printJS({printable: this.list, properties:[
+    'id',
+    'fecha',
+    'phone',
+    'area',
+    'problema',
+    'responsablearea',
+    'responsablesoporte',
+    'codigopatrimonial',
+    'fechaentrega',
+    'salida'],
+    type: 'json'})
+  }
 }

@@ -20,6 +20,8 @@ import { FormPracticanteComponent } from './CrudPracticante/form-practicante/for
 import { ListPracticanteComponent } from './CrudPracticante/list-practicante/list-practicante.component';
 import { IndexCuadernoComponent } from './CuadernoDocumentacion/index-cuaderno/index-cuaderno.component';
 import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-cuaderno/formulario-cuaderno.component';
+import { IndexGatComponent } from './LibroGat/index-gat/index-gat.component';
+import { FormGatComponent } from './LibroGat/form-gat/form-gat.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-
     FormPracticanteComponent,
     ListPracticanteComponent,
     IndexCuadernoComponent,
-    FormularioCuadernoComponent
+    FormularioCuadernoComponent,
+    IndexGatComponent,
+    FormGatComponent
   ],
   imports: [
     BrowserModule,

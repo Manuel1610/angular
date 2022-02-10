@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { JarwisService } from '../../services/jarwis.service';
 import { TokenService } from '../../services/token.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -29,6 +30,7 @@ export class SignupComponent implements OnInit {
     this.Jarwis.signup(this.form).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
+
     );
   }
   handleError(error: any): void {
@@ -44,3 +46,4 @@ export class SignupComponent implements OnInit {
   }
 
 }
+

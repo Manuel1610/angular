@@ -1,9 +1,9 @@
+<p>index-gat works!</p>
 <app-navbar></app-navbar>
 <section class="container">
   <div class="d-flex justify-content-between">
     <h4>List </h4>
-    <a routerLink="/form" class="btn btn-success">Create </a>
-    <a  class="btn btn-success" (click)="print()">IMPRIMIR </a>
+    <a routerLink="/FormGat" class="btn btn-success">Create </a>
   </div>
 
   <br>
@@ -34,7 +34,7 @@
       <td>{{ d.fechaentrega}}</td>
       <td>{{ d.salida }}</td>
       <td>
-        <a href="#" routerLink="/form/{{ d.id }}" class="btn btn-primary">Edit</a>
+        <a href="#" routerLink="/FormGat/{{ d.id }}" class="btn btn-primary">Edit</a>
         <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>
       </td>
     </tbody>

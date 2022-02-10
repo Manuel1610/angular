@@ -13,6 +13,8 @@ import { IndexCuadernoComponent } from './CuadernoDocumentacion/index-cuaderno/i
 import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-cuaderno/formulario-cuaderno.component';
 import { FormPracticanteComponent } from './CrudPracticante/form-practicante/form-practicante.component';
 import { ListPracticanteComponent } from './CrudPracticante/list-practicante/list-practicante.component';
+import { FormGatComponent } from './LibroGat/form-gat/form-gat.component';
+import { IndexGatComponent } from './LibroGat/index-gat/index-gat.component';
 
 const routes: Routes = [
   {
@@ -40,7 +42,6 @@ const routes: Routes = [
     component: ResponseResetComponent,
     canActivate: [BeforeLoginService]
   },
-
   {
     path: 'indexform',
     component : ListCuadernoComponent,
@@ -75,6 +76,18 @@ const routes: Routes = [
   {
     path: 'FormPracticantes/:id',
     component : FormPracticanteComponent
+  },
+  {
+    path: 'FormGat',
+    component : FormGatComponent
+  },
+  {
+    path: 'FormGat/:id',
+    component : FormGatComponent
+  },
+  {
+    path: 'IndeXGat',
+    component : IndexGatComponent,
   }
 ];
 
