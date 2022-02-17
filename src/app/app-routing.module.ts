@@ -15,6 +15,7 @@ import { FormPracticanteComponent } from './CrudPracticante/form-practicante/for
 import { ListPracticanteComponent } from './CrudPracticante/list-practicante/list-practicante.component';
 import { FormGatComponent } from './LibroGat/form-gat/form-gat.component';
 import { IndexGatComponent } from './LibroGat/index-gat/index-gat.component';
+import { PaginaComponent } from './pagina/pagina.component';
 
 const routes: Routes = [
   {
@@ -45,49 +46,66 @@ const routes: Routes = [
   {
     path: 'indexform',
     component : ListCuadernoComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'form',
     component : FormCuadernoComponent,
+    canActivate: [AfterLoginService]
   },
   { path: 'form/:id',
-    component: FormCuadernoComponent
+    component: FormCuadernoComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'formulario',
-    component : FormularioCuadernoComponent
+    component : FormularioCuadernoComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'formulario/:id',
-    component : FormularioCuadernoComponent
+    component : FormularioCuadernoComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'indexformulario',
     component : IndexCuadernoComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'IndexPracticantes',
     component : ListPracticanteComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'FormPracticantes',
-    component : FormPracticanteComponent
+    component : FormPracticanteComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'FormPracticantes/:id',
-    component : FormPracticanteComponent
+    component : FormPracticanteComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'FormGat',
-    component : FormGatComponent
+    component : FormGatComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'FormGat/:id',
-    component : FormGatComponent
+    component : FormGatComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: 'IndeXGat',
     component : IndexGatComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: '',
+    component : PaginaComponent,
+    canActivate : [BeforeLoginService]
   }
 ];
 

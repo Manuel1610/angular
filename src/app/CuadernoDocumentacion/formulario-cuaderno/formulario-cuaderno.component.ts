@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CuadernoDocumentacionService } from 'src/app/CrudService/cuaderno-documentacion.service';
-
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-formulario-cuaderno',
@@ -44,7 +44,15 @@ CuadernoForm!: FormGroup;
       });
     }
   }
-    save(){
+    save(){Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
       console.log(this.CuadernoForm.value);
       let id =this.route.snapshot.paramMap.get('id');
     if (id != null){
@@ -58,5 +66,10 @@ CuadernoForm!: FormGroup;
 
     }
     this.router.navigate(['/indexformulario'])
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info')
   }
+})
 }
+}
+

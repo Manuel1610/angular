@@ -30,8 +30,12 @@ export class SignupComponent implements OnInit {
     this.Jarwis.signup(this.form).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
-
     );
+    Swal.fire(
+      'Buen Trabajo!',
+      'Ahora espera que te asignen un rol!',
+      'success'
+    )
   }
   handleError(error: any): void {
     console.log(error)

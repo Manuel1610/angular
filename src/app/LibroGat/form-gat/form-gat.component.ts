@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LibroGatService } from 'src/app/CrudService/libro-gat.service';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-form-gat',
   templateUrl: './form-gat.component.html',
@@ -44,6 +44,16 @@ export class FormGatComponent implements OnInit {
     }
   }
     save(){
+      Swal.fire({
+        title: 'Do you want to save the changes?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Save',
+        denyButtonText: `Don't save`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Saved!', '', 'success')
       console.log(this.CuadernoFormGat.value);
       let id =this.route.snapshot.paramMap.get('id');
     if (id != null){
@@ -56,7 +66,11 @@ export class FormGatComponent implements OnInit {
       });
 
     }
-    this.router.navigate(['/indexform'])
+    this.router.navigate(['/IndeXGat'])
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info')
   }
-
+})
 }
+}
+

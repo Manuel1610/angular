@@ -1,35 +1,70 @@
 
-<div class="body">
-  <div class="text-center">
-    <div class="h3 mb-3 fw-normal" >Login Here</div>
-    <div class="form-signin">
-      <form #loginForm=ngForm (ngSubmit)="onSubmit()">
+<div class="container">
 
-        <div [hidden]="!error">b
-          {{error}}
-        </div>
-        <div class="form-floating">
-          <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="form.email" required>
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-          <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password" [(ngModel)]="form.password" required>
-          <label for="floatingPassword">Password</label>
-        </div>
-        <div>
-        <button  class="btn btn-primary" class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="!loginForm.valid" >Sign in</button>
-        </div>
-          <hr>
-        <div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit" routerLink="/signup" >registrase</button>
-        </div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kodinger">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
 
-        <small class=float-right>
-          <a routerLink="/request-reset">Reset Password</a>
-        </small>
-      </form>
-    </div>
-  </div>
+  <body class="my-login-page">
+    <section class="h-100">
+      <div class="container h-100">
+        <div class="row justify-content-md-center h-100">
+          <div class="card-wrapper">
+            <div class="brand">
+              <img src="../../../assets/img auth/logo.jpg" alt="logo">
+            </div>
+            <div class="card fat">
+              <div class="card-body">
+                <h4 class="card-title">Login</h4>
+                <form #loginForm=ngForm (ngSubmit)="onSubmit()" class="my-login-validation" novalidate="">
+                  <div class="form-group">
+                    <label for="email">E-Mail Address</label>
+                    <input id="inputEmail3" type="email" class="form-control" name="email"  [(ngModel)]="form.email" required>
+                    <div class="invalid-feedback">
+                      Email is invalid
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password">Password
+                      <a href="" class="float-right"  routerLink="/request-reset">
+                        Forgot Password?
+                      </a>
+                    </label>
+                    <input id="inputPassword3" type="password" class="form-control" name="password" [(ngModel)]="form.password" required>
+                      <div class="invalid-feedback">
+                        Password is required
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="custom-checkbox custom-control">
+                      <input type="checkbox" name="remember" id="remember" class="custom-control-input">
+                      <label for="remember" class="custom-control-label">Remember Me</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0">
+                    <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.valid">
+                      Login
+                    </button>
+                  </div>
+                  <div class="mt-4 text-center">
+                    Don't have an account? <a href="" routerLink="/signup" >Create One</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="footer">
+              Copyright &copy; 2022 &mdash; ATISOP
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  </html>
 </div>
-
-

@@ -22,6 +22,8 @@ import { IndexCuadernoComponent } from './CuadernoDocumentacion/index-cuaderno/i
 import { FormularioCuadernoComponent } from './CuadernoDocumentacion/formulario-cuaderno/formulario-cuaderno.component';
 import { IndexGatComponent } from './LibroGat/index-gat/index-gat.component';
 import { FormGatComponent } from './LibroGat/form-gat/form-gat.component';
+import { PaginaComponent } from './pagina/pagina.component';
+import { UsuariosComponent } from './auth/usuarios/usuarios.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { FormGatComponent } from './LibroGat/form-gat/form-gat.component';
     IndexCuadernoComponent,
     FormularioCuadernoComponent,
     IndexGatComponent,
-    FormGatComponent
+    FormGatComponent,
+    PaginaComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,

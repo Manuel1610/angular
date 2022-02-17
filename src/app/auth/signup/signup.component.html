@@ -1,53 +1,74 @@
-<p>signup works!</p>
-<div class="mt-4 col-8 offset-2">
-  <div class="card">
-    <div class="card-header">Register Here</div>
-    <div class="card-body">
-      <form #signupForm=ngForm (ngSubmit)="onSubmit()">
-        <div class="form-group row">
-          <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
-          <div class="col-sm-10">
-            <input type="text" name="name" class="form-control" id="inputname3" placeholder="name" [(ngModel)]="form.name" required>
 
-          </div>
-        </div>
+<div class="container">
+  <html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="form.email" required>
+</head>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="../../../assets/img auth/logo.jpg" alt="bootstrap 4 login page">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Register</h4>
+							<form #signupForm=ngForm (ngSubmit)="onSubmit()" class="my-login-validation" novalidate="">
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input type="text" class="form-control" name="name" id="inputname3" [(ngModel)]="form.name" required autofocus>
+									<div class="invalid-feedback">
+										What's your name?
+									</div>
+								</div>
 
-          </div>
-        </div>
+								<div class="form-group">
+									<label for="email">E-Mail Address</label>
+									<input type="email" class="form-control" name="email" id="inputEmail3"  [(ngModel)]="form.email" required>
+									<div class="invalid-feedback">
+										Your email is invalid
+									</div>
+								</div>
 
-        <div class="form-group row">
-          <label for="inputPasswordConfirmation3" class="col-sm-2 col-form-label">Password</label>
-          <div class="col-sm-10">
-            <input type="password" name="password" class="form-control" id="inputPasswordConfirmation3" placeholder="Confirm Password"
-              [(ngModel)]="form.password" required>
+								<div class="form-group">
+									<label for="password">Password</label>
+									<input type="password" class="form-control" name="password" id="inputPasswordConfirmation3" [(ngModel)]="form.password" required data-eye >
+									<div class="invalid-feedback">
+										Password is required
+									</div>
+								</div>
 
-          </div>
-        </div>
+                <div class="form-group">
+									<label for="password">Confirm Password</label>
+									<input type="password" name="password_confirmation" class="form-control" id="inputPassword3"  [(ngModel)]="form.password_confirmation" required data-eye>
+									<div class="invalid-feedback">
+										Password need Confirm
+									</div>
+								</div>
 
-        <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
-          <div class="col-sm-10">
-            <input type="password" name="password_confirmation" class="form-control" id="inputPassword3" placeholder="Password" [(ngModel)]="form.password_confirmation"
-              required>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <div class="col-sm-10 offset-2">
-
-            <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Sign Up</button>
-
-            <a routerLink="/login" class="btn btn-info float-right">Sign in</a>
-
-          </div>
-        </div>
-
-      </form>
-    </div>
-  </div>
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block" [disabled]="!signupForm.valid">
+										Register
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Already have an account? <a href="" routerLink="/login">Login</a>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						Copyright &copy; 2017 &mdash; Your Company
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
 </div>
