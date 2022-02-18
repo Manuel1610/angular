@@ -17,9 +17,8 @@ PracticanteForm!:FormGroup;
     private route: ActivatedRoute,
     private formBuild: FormBuilder,
     private practicanteService: PracticanteService,
-  ) {
+  ) { }
 
-   }
   ngOnInit(): void {
     this.PracticanteForm = this.formBuild.group({
       Nombres:                 [],

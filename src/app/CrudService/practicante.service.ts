@@ -20,16 +20,32 @@ export class PracticanteService {
     });
   }
   public getById(id : any): Observable<any> {
-    return this.http.get<any>(`${this.endPoint}/${id}`);
+    return this.http.get<any>(`${this.endPoint}/${id}`,{
+      headers:{
+        'Authorization': 'Bearer' + this.tokenService.get()
+      }
+    });
   }
   public add(data : any): Observable<any> {
-    return this.http.post<any>(`${this.endPoint}`, data);
+    return this.http.post<any>(`${this.endPoint}`, data, {
+      headers:{
+        'Authorization': 'Bearer' + this.tokenService.get()
+      }
+    });
   }
   public update(id : any, data : any): Observable<any> {
-    return this.http.put<any>(`${this.endPoint}/${id}`, data);
+    return this.http.put<any>(`${this.endPoint}/${id}`, data, {
+      headers:{
+        'Authorization': 'Bearer' + this.tokenService.get()
+      }
+    });
   }
   public delete(id : any): Observable<any> {
     console.log(`${this.endPoint}/${id}` );
-    return this.http.delete<any>(`${this.endPoint}/${id}`);
+    return this.http.delete<any>(`${this.endPoint}/${id}`,{
+      headers:{
+        'Authorization': 'Bearer' + this.tokenService.get()
+      }
+    });
   }
  }

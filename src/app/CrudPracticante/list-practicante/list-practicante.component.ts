@@ -14,9 +14,7 @@ export class ListPracticanteComponent implements OnInit {
   constructor(
     private route : ActivatedRoute,
     private practicanteService : PracticanteService,
-  ) {
-    this.getList();
-  }
+  ) {  }
 
   ngOnInit(): void {
     this.getList();

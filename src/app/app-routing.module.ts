@@ -16,6 +16,8 @@ import { ListPracticanteComponent } from './CrudPracticante/list-practicante/lis
 import { FormGatComponent } from './LibroGat/form-gat/form-gat.component';
 import { IndexGatComponent } from './LibroGat/index-gat/index-gat.component';
 import { PaginaComponent } from './pagina/pagina.component';
+import { UsuariosComponent } from './auth/usuarios/usuarios.component';
+import { UsuariosformComponent } from './auth/usuariosform/usuariosform.component';
 
 const routes: Routes = [
   {
@@ -100,6 +102,22 @@ const routes: Routes = [
   {
     path: 'IndeXGat',
     component : IndexGatComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'IndeXUsuarios',
+    component : UsuariosComponent,
+    canActivate: [AfterLoginService]
+
+  },
+  {
+    path: 'FormUsuarios',
+    component : UsuariosformComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'FormUsuarios/:id',
+    component : UsuariosformComponent,
     canActivate: [AfterLoginService]
   },
   {

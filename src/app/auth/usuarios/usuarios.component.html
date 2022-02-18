@@ -1,1 +1,20 @@
-<p>usuarios works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+<table class="color">
+  <thead >
+    <th>id</th>
+    <th>NOMBRES</th>
+    <th>EMAIL</th>
+    <th width="220px">ACCIÓN</th>
+  </thead>
+  <tbody *ngFor="let d of list">
+    <td>{{ d.id}}</td>
+    <td>{{ d.name }}</td>
+    <td>{{ d.email }}</td>
+    <td>
+      <a href="#"class="btn btn-primary" routerLink="/FormUsuarios/{{ d.id }}" >Actualizar</a>
+      <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>
+    </td>
+  </tbody>
+</table>
+</div>
