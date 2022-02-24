@@ -1,9 +1,23 @@
 <app-navbar></app-navbar>
-<section class="container">
+<div class="container">
   <div class="d-flex justify-content-between">
     <h4>List </h4>
-    <a routerLink="/form" class="btn btn-success">Create </a>
-    <a  class="btn btn-success" (click)="print()">IMPRIMIR </a>
+
+  </div>
+  <div class="container">
+    <div class="row justify-content-evenly">
+      <div class="col-4">
+        <div>
+          <ul class="listar">
+            <li> <fa-icon routerLink="/form" class="btn btn-success" [icon]="faCirclePlus">Create </fa-icon> </li>
+            <li> <fa-icon class="btn btn-success"  (click)="print()" [icon]="faPrint">IMPRIMIR </fa-icon></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </div>
+    </div>
   </div>
 
   <br>
@@ -20,7 +34,7 @@
       <th>N° PATRIMONIAL</th>
       <th>FECHA ENTREGA</th>
       <th>SALIDA</th>
-      <th width="220px">ACCIÓN</th>
+      <th width="150px">ACCIÓN</th>
     </thead>
     <tbody *ngFor="let d of list">
       <td>{{ d.id }}</td>
@@ -34,9 +48,12 @@
       <td>{{ d.fechaentrega}}</td>
       <td>{{ d.salida }}</td>
       <td>
-        <a href="#" routerLink="/form/{{ d.id }}" class="btn btn-primary">Edit</a>
-        <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>
+        <fa-icon routerLink="/form/{{ d.id }}" class="btn btn-primary"  [icon]="faPenToSquare"></fa-icon>
+
       </td>
     </tbody>
   </table>
-</section>
+      <div>
+        <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
+      </div>
+  </div>

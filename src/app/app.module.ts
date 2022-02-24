@@ -25,6 +25,12 @@ import { FormGatComponent } from './LibroGat/form-gat/form-gat.component';
 import { PaginaComponent } from './pagina/pagina.component';
 import { UsuariosComponent } from './auth/usuarios/usuarios.component';
 import { UsuariosformComponent } from './auth/usuariosform/usuariosform.component';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faR, fas } from '@fortawesome/free-solid-svg-icons';
+import {PaginatorModule} from 'primeng/paginator';
+import {ButtonModule} from 'primeng/button';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +58,10 @@ import { UsuariosformComponent } from './auth/usuariosform/usuariosform.componen
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule,
+    PaginatorModule,
+    ButtonModule
   ],
   providers: [
     JarwisService,
@@ -61,4 +70,8 @@ import { UsuariosformComponent } from './auth/usuariosform/usuariosform.componen
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(  library: FaIconLibrary){
+    library.addIconPacks(fas);
+  }
+}

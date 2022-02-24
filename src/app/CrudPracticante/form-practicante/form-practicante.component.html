@@ -1,71 +1,77 @@
 <app-navbar></app-navbar>
-<section class="container">
-<div class="row mb-3">
-  <form [formGroup]="PracticanteForm" (ngSubmit)="save()">
-    <div [hidden]="false">
-    </div>
-    <div class="row mb-3" >
-        <label for="colFormLabel" class="col-sm-2 col-form-label" >NOMBRES:</label>
+
+<header>
+
+</header>
+<div class="container">
+      <div class="row">
+        <div [hidden]="false">
+        </div>
+      <div class="col">
+        <div class="row mb-3" [formGroup]="PracticanteForm">
+          <label for="colFormLabel" class="col-sm-2 col-form-label" >NOMBRES:</label>
+            <div class="col-sm-10">
+              <input class="col-sm-10"type="text" formControlName="Nombres" name="Nombres" id="Nombres" class="form-control" id="colFormLabel"required>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3" [formGroup]="PracticanteForm">
+        <label for="start" class="col-sm-2 col-form-label" >FECHA NACIMIENTO:</label>
           <div class="col-sm-10">
-            <input class="col-sm-10"type="text" formControlName="Nombres" name="Nombres" id="Nombres" class="form-control" id="colFormLabel"required>
+            <input type="text" formControlName="FechaNacimiento" name="trip-start" id="start" class="form-control" id="colFormLabel" placeholder="Año-Mes-Dia"required>
+          </div>
+        </div>
+
+        <div class="row mb-3" [formGroup]="PracticanteForm">
+          <label for="colFormLabel" class="col-sm-2 col-form-label">CELULAR:</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="Celular" name="Celular" id="Celular" class="form-control" id="colFormLabel" required>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3" [formGroup]="PracticanteForm">
+          <label for="colFormLabel" class="col-sm-2 col-form-label">FECHA INICIO:</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="Inicio" name="Inicio" id="Inicio" class="form-control" id="colFormLabel" placeholder="Año-Mes-Dia" required>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="row mb-3" [formGroup]="PracticanteForm">
+          <label for="colFormLabel" class="col-sm-2 col-form-label">APELLIDOS:</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="Apellidos" name="Apellidos" id="Apellidos"class="form-control" id="colFormLabel" required>
+            </div>
+      </div>
+      <br>
+      <div class="row mb-3" [formGroup]="PracticanteForm">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">DNI:</label>
+          <div class="col-sm-10">
+            <input type="text" formControlName="DNI" name="DNI" id="DNI" class="form-control" id="colFormLabel" required>
+          </div>
+      </div>
+      <br>
+      <div class="row mb-3" [formGroup]="PracticanteForm">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">TURNO:</label>
+          <div class="col-sm-10">
+            <select class="form-select" id="exampleSelect1" type="text" formControlName="Turno" name="Turno" id="Turno"  class="form-control" id="colFormLabel" required>
+              <option>MAÑANA</option>
+              <option>TARDE</option>
+            </select>
+          </div>
+      </div>
+      <br>
+      <div class="row mb-3" [formGroup]="PracticanteForm">
+        <label for="colFormLabel" class="col-sm-2 col-form-label" >FECHA TERMINO:</label>
+          <div class="col-sm-10">
+            <input type="text" formControlName="Fin" name="Fin" id="Fin" class="form-control" id="colFormLabel" placeholder="Año-Mes-Dia" required>
           </div>
     </div>
-    <br>
-    <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">APELLIDOS:</label>
-        <div class="col-sm-10">
-          <input type="text" formControlName="Apellidos" name="Apellidos" id="Apellidos"class="form-control" id="colFormLabel" required>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-3">
-      <label for="start" class="col-sm-2 col-form-label">FECHA DE NACIMIENTO:</label>
-        <div class="col-sm-10">
-          <input type="text" formControlName="FechaNacimiento" name="trip-start" id="start" class="form-control" id="colFormLabel" required>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">DNI:</label>
-        <div class="col-sm-10">
-          <input type="text" formControlName="DNI" name="DNI" id="DNI" class="form-control" id="colFormLabel" required>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">CELULAR:</label>
-        <div class="col-sm-10">
-          <input type="text" formControlName="Celular" name="Celular" id="Celular" class="form-control" id="colFormLabel" required>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">TURNO:</label>
-        <div class="col-sm-10">
-          <select class="form-select" id="exampleSelect1" type="text" formControlName="Turno" name="Turno" id="Turno"  class="form-control" id="colFormLabel" required>
-            <option>MAÑANA</option>
-            <option>TARDE</option>
-          </select>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-3">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">FECHA INICIO:</label>
-        <div class="col-sm-10">
-          <input type="text" formControlName="Inicio" name="Inicio" id="Inicio" class="form-control" id="colFormLabel" required>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-3" >
-      <label for="colFormLabel" class="col-sm-2 col-form-label" >FECHA TERMINO:</label>
-        <div class="col-sm-10">
-          <input type="text" formControlName="Fin" name="Fin" id="Fin" class="form-control" id="colFormLabel"required>
-        </div>
+      </div>
+
   </div>
-  <br>
-    <br>
-    <div class="d-grid gap-2 col-6 mx-auto">
-      <button class="btn btn-primary" type="button" type="submit" [disabled]="!PracticanteForm.valid">Button</button>
-    </div>
-</form>
-<br>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="button" type="submit" [disabled]="!PracticanteForm.valid" (click)="save()">GUARDAR</button>
+  </div>
