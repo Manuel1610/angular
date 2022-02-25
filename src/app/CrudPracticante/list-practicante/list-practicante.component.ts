@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PracticanteService } from 'src/app/CrudService/practicante.service';
+import * as printJS from 'print-js';
+import { faPenToSquare, faPrint , faCirclePlus , faTrash} from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-list-practicante',
@@ -9,7 +12,11 @@ import { PracticanteService } from 'src/app/CrudService/practicante.service';
 })
 export class ListPracticanteComponent implements OnInit {
 
-  list: any;
+  ListPracticantes: any;
+  faPenToSquare = faPenToSquare;
+  faPrint = faPrint;
+  faCirclePlus = faCirclePlus;
+  faTrash = faTrash;
 
   constructor(
     private route : ActivatedRoute,
@@ -21,7 +28,7 @@ export class ListPracticanteComponent implements OnInit {
   }
   private getList() {
     this.practicanteService.getList().subscribe(response => {
-      this.list=response;
+      this.ListPracticantes=response;
     });
   }
   delete(id  : any) {
@@ -31,6 +38,17 @@ export class ListPracticanteComponent implements OnInit {
       this.getList();
     });
   }
-
+  print(){
+    printJS({printable: this.ListPracticantes, properties:[
+    'Nombres',
+      'Apellidos',
+      'FechaNacimiento',
+      'DNI',
+      'Celular',
+      'Turno',
+      'Inicio',
+      'Fin',],
+    type: 'json'})
+  }
 }
 

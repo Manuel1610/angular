@@ -20,7 +20,7 @@ export class RequestResetComponent implements OnInit {
   ngOnInit() {
     Swal.fire({
       title: 'Error!',
-      text: 'Do you want to continue',
+      text: 'Aun no implementado!',
       icon: 'error',
       confirmButtonText: 'Cool'
     })
