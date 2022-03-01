@@ -29,6 +29,7 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faR, fas } from '@fortawesome/free-solid-svg-icons';
 import {PaginatorModule} from 'primeng/paginator';
 import {ButtonModule} from 'primeng/button';
+import { RoleuserComponent } from './auth/roleuser/roleuser.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {ButtonModule} from 'primeng/button';
     FormGatComponent,
     PaginaComponent,
     UsuariosComponent,
-    UsuariosformComponent
+    UsuariosformComponent,
+    RoleuserComponent
   ],
   imports: [
     BrowserModule,

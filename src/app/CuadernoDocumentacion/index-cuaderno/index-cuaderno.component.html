@@ -3,9 +3,22 @@
 <section class="container">
   <div class="d-flex justify-content-between">
     <h4>List </h4>
-    <a routerLink="/formulario" class="btn btn-success">Create </a>
   </div>
-
+  <div class="container">
+    <div class="row justify-content-evenly">
+      <div class="col-4">
+        <div>
+          <ul class="listar">
+            <li> <fa-icon routerLink="/formulario" class="btn btn-success" [icon]="faCirclePlus">Create </fa-icon> </li>
+            <li> <fa-icon class="btn btn-success"  (click)="print()" [icon]="faPrint">IMPRIMIR </fa-icon></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </div>
+    </div>
+  </div>
   <br>
 
   <table class="color">
@@ -21,9 +34,9 @@
       <th>FOLIO</th>
       <th>FECHA ENTREGA</th>
       <th>CARGO</th>
-      <th width="220px">ACCIÓN</th>
+      <th width="120px">ACCIÓN</th>
     </thead>
-    <tbody *ngFor="let d of list">
+    <tbody *ngFor="let d of listarDatos">
       <td>{{ d.id }}</td>
       <td>{{ d.fecha }}</td>
       <td>{{ d.documento }}</td>
@@ -36,8 +49,7 @@
       <td>{{ d.fechaentrega}}</td>
       <td>{{ d.cargo }}</td>
       <td>
-        <a href="#" routerLink="/formulario/{{ d.id }}" class="btn btn-primary">Edit</a>
-        <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>
+        <fa-icon href="#" routerLink="/formulario/{{ d.id }}" class="btn btn-primary"  [icon]="faPenToSquare">Edit</fa-icon>
       </td>
     </tbody>
   </table>

@@ -1,5 +1,8 @@
 <app-navbar></app-navbar>
-<div class="container">
+<section class="container">
+  <div class="d-flex justify-content-between">
+    <h4>List </h4>
+  </div>
 <table class="color">
   <thead >
     <th>id</th>
@@ -7,14 +10,17 @@
     <th>EMAIL</th>
     <th width="220px">ACCIÓN</th>
   </thead>
-  <tbody *ngFor="let d of list">
+  <tbody *ngFor="let d of listarUsuarios">
     <td>{{ d.id}}</td>
     <td>{{ d.name }}</td>
     <td>{{ d.email }}</td>
     <td>
-      <a href="#"class="btn btn-primary" routerLink="/FormUsuarios/{{ d.id }}" >Actualizar</a>
-      <button type="button" (click)="delete(d.id)" class="btn btn-danger">Delete</button>
+      <ul class="listar">
+        <li><fa-icon routerLink="/FormUsuarios/{{ d.id }}" class="btn btn-primary"  [icon]="faPenToSquare">Actualizar</fa-icon>  </li>
+        <li> <fa-icon (click)="delete(d.id)" class="btn btn-danger" [icon]="faTrash" >Delete</fa-icon> </li>
+      </ul>
     </td>
   </tbody>
 </table>
-</div>
+<app-roleuser></app-roleuser>
+</section>

@@ -1,0 +1,20 @@
+<p>roleuser works!</p>
+<div class="container">
+
+<table class="color">
+  <thead >
+    <th>id</th>
+    <th>NOMBRES</th>
+    <th>ROLE</th>
+    <th width="220px">ACCIÓN</th>
+  </thead>
+  <tbody *ngFor="let d of ListUserRoles">
+    <td>{{ d.id}}</td>
+    <td>{{ d.id_users }}</td>
+    <td>{{ d.id_role }}</td>
+    <td>
+      <fa-icon (click)="delete(d.id)" class="btn btn-danger" [icon]="faTrash">Delete</fa-icon>
+    </td>
+  </tbody>
+</table>
+</div>

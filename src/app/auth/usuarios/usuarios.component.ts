@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserServiceService } from 'src/app/services/user-service.service';
+import { faPenToSquare, faPrint , faCirclePlus , faTrash} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
@@ -8,7 +10,9 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 })
 export class UsuariosComponent implements OnInit {
 
-  list:any;
+  listarUsuarios:any;
+  faPenToSquare = faPenToSquare;
+  faTrash = faTrash;
 
   constructor(
     private route : ActivatedRoute,
@@ -19,7 +23,7 @@ export class UsuariosComponent implements OnInit {
   }
   private getList() {
     this.userServiceService.getList().subscribe(response => {
-      this.list=response;
+      this.listarUsuarios=response;
     });
   }
   delete(id  : any) {
