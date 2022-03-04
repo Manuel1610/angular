@@ -18,10 +18,10 @@
             </div>
             <div class="card fat">
               <div class="card-body">
-                <h4 class="card-title">Login</h4>
+                <h4 class="card-title">ACCESO</h4>
                 <form #loginForm=ngForm (ngSubmit)="onSubmit()" class="my-login-validation" novalidate="">
                   <div class="form-group">
-                    <label for="email">E-Mail Address</label>
+                    <label for="email">DIRECCIÓN DE CORREO ELECTRÓNICO</label>
                     <input id="inputEmail3" type="email" class="form-control" name="email"  [(ngModel)]="form.email" required>
                     <div class="invalid-feedback">
                       Email is invalid
@@ -29,10 +29,8 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="password">Password
-                      <a href="" class="float-right"  routerLink="/request-reset">
-                        Forgot Password?
-                      </a>
+                    <label for="password">CONTRASEÑA
+
                     </label>
                     <input id="inputPassword3" type="password" class="form-control" name="password" [(ngModel)]="form.password" required>
                       <div class="invalid-feedback">
@@ -43,17 +41,17 @@
                   <div class="form-group">
                     <div class="custom-checkbox custom-control">
                       <input type="checkbox" name="remember" id="remember" class="custom-control-input">
-                      <label for="remember" class="custom-control-label">Remember Me</label>
+                      <label for="remember" class="custom-control-label">RECORDAR CONTRASEÑA</label>
                     </div>
                   </div>
 
                   <div class="form-group m-0">
                     <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.valid">
-                      Login
+                      INGRESAR
                     </button>
                   </div>
                   <div class="mt-4 text-center">
-                    Don't have an account? <a href="" routerLink="/signup" >Create One</a>
+                    ¡¿NO TIENES UNA CUENTA? <a href="" routerLink="/signup" >CREAR</a>
                   </div>
                 </form>
               </div>

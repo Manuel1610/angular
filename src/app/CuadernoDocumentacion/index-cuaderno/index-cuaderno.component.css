@@ -24,26 +24,15 @@ table.color thead th {
   font-weight: bold;
   color: #ffffff;
   text-align: center;
-  border-left: 2px solid #c0c0c0;
-}
-table.color thead th:first-child {
-  border-left: none;
+  border-left: 20px;
 }
 
-table.color tfoot td {
-  font-size: 8px;
-}
-table.color tfoot .links {
-  text-align: right;
-}
-.fa-icon{
-  font-size: 8%;
-}
 ul.listar li {
   display: inline;
   padding-right: 2em;
 }
-/* Prueba Styles */
+
+
 
 
 
